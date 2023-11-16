@@ -40,7 +40,7 @@ char **theTokenizer(char *line)
 		token = strtok(NULL, DELIM);
 		i++;
 	}
-	free(line),line = NULL;
+	free(line), line = NULL;
 	command[i] = NULL;
 	return (command);
 }
