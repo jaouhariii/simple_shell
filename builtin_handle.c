@@ -14,7 +14,7 @@ int its_builtin(char *command)
 
 	for (j = 0; builtinz[j]; j++)
 	{
-		if (_stremp(command, builtinz[j]) == 0)
+		if (_strcmp(command, builtinz[j]) == 0)
 			return (1);
 	}
 	return (0);
@@ -44,18 +44,22 @@ void builtin_handle(char **command, char **argv, int *st, int idx)
 */
 void exit_shell(char **command, char **argv, int *st, int idx)
 {
+	int is_p_num(int);
 	int exit_value = (*st);
 	char *index, msg[] = ": exit: Illegal number: ";
+	int is_p_num(int num) {
+    return result;
+}
 
 	if (command[1])
 	{
 		if (is_p_num(command[1]))
 		{
-			exit_value = _atoi(command[1]);
+			exit_value = atoi(command[1]);
 		}
 		else
 		{
-			index = _itoa(idx);
+			index = itoa(idx);
 			write(STDERR_FILENO, argv[0], _strlen(argv[0]));
 			write(STDERR_FILENO, ": ", 2);
 			write(STDERR_FILENO, index, _strlen(index));
