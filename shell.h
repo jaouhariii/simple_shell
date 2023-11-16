@@ -24,7 +24,7 @@ char *_getPath(char *cmd);
 
 /* builtinz */
 int its_builtin(char *command);
-void builtin_handle(char **command, char **argv,int *st, int idx);
+void builtin_handle(char **command, char **argv, int *st, int idx);
 void exit_shell(char **command, char **argv, int *st, int idx);
 void env_print(char **command, int *st);
 
@@ -37,7 +37,7 @@ char *_strcpy(char *dest, char *src);
 
 /* tools */
 void freeArrayToD(char **array);
-void print_error(char *name, char *cmd, int idx); 
+void print_error(char *name, char *cmd, int idx);
 char *_itoa(int n);
 void reverse_string(char *str, int len);
 
