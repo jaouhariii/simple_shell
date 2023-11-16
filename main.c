@@ -28,7 +28,7 @@ int main(int ac, char **argv)
 	if (its_builtin(command[0]))
 		builtin_handle(command, argv, &st, idx);
 	else
-	
+
 		st = _exec(command, argv, idx);
 	}
 }
