@@ -8,7 +8,7 @@
 */
 int _exec(char **command, char **argv, int idx)
 {
-	char full_cmd;
+	char *full_cmd;
 	pid_t child;
 	int status;
 
