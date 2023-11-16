@@ -2,7 +2,7 @@
 /**
  * main - The Simple Shell main entry point func
  * @ac: Count of argumnents
- * @av: Arguments
+ * @argv: Arguments
  * Return: 0 Always (success).
 */
 int main(int ac, char **argv)
