@@ -4,12 +4,12 @@
  * @ac: Count of argumnents
  * @av: Arguments
  * Return: 0 Always (success).
-*/ 
-int main (int ac, char **argv)
+*/
+int main(int ac, char **argv)
 {
     char *line = NULL;
     char **command = NULL;
-    int st = 0, idx = 0; 
+    int st = 0, idx = 0;
     (void) ac;
 
     while (true)
@@ -23,7 +23,7 @@ int main (int ac, char **argv)
         }
         idx++;
         command = theTokenizer(line);
-        if (!command) 
+        if (!command)
         continue;
         if (its_builtin(command[0]))
             builtin_handle(command, argv, &st, idx);
