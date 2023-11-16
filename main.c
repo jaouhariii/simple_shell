@@ -7,13 +7,12 @@
 */
 int main(int ac, char **argv)
 {
-    char *line = NULL;
-    char **command = NULL;
-    int st = 0, idx = 0;
-    (void) ac;
+	char *line = NULL;
+	char **command = NULL;
+ 	int st = 0, idx = 0;
+ 	(void) ac;
 
-    while (true)
-    {
+	while (true)
         line = examin_line();
         if (line == NULL)
         {
